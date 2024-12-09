@@ -60,9 +60,14 @@ form {
   padding: 0;
 }
 
-.main-header-item a {
+.main-header-item a,
+.main-header-item button {
+  font: inherit;
+  background: transparent;
+  border: none;
   text-decoration: none;
   color: hsla(0, 0%, 100%, .6);
+  cursor: pointer;
 }
 
 .main-header-item a:hover,
@@ -102,16 +107,23 @@ form {
   padding: 0;
 }
 
-.mobile-nav-item a {
+.mobile-nav-item a,
+.mobile-nav button {
+  font: inherit;
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
   padding: 0.5rem 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .mobile-nav-item a:active,
 .mobile-nav-item a:hover,
-.mobile-nav-item a.active {
+.mobile-nav-item a.active,
+.mobile-nav-item button:hover,
+.mobile-nav-item button:active {
   background: #6200ff;
   color: white;
   border-radius: 3px;
@@ -218,6 +230,22 @@ form {
   color: white;
 }
 
+.user-message {
+  margin: auto;
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: 1px solid #4771fa;
+  background: #b9c9ff;
+  text-align: center;
+}
+
+.user-message-error {
+  color: red;
+  border-color: red;
+  background: rgb(255, 176, 176);
+}
+
 @media (min-width: 768px) {
   .main-header-nav {
     display: flex;
@@ -225,5 +253,9 @@ form {
 
   #side-menu-toggle {
     display: none;
+  }
+
+  .user-message {
+    width: 30rem;
   }
 }
